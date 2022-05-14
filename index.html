@@ -1,0 +1,97 @@
+<!doctype html>
+<html class="no-js" lang="pt">
+
+<head>
+    <meta charset="utf-8">
+    <title>Formulário de Registro</title>
+    <meta name="description" content="Formulário de Login">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/main.css">
+    <meta name="theme-color" content="#fafafa">
+
+</head>
+<body>
+<div class="conteúdo">
+    <form>
+        <h3>Registrar-se</h3>
+        <div class="inputBox">
+            <span>Usuário</span>
+            <div class="box">
+                <div class="ícone">
+                    <ion-icon name="person"></ion-icon>
+                </div>
+                <input type="text" placeholder="Usuário">
+            </div>
+        </div>
+        <div class="inputBox">
+            <span>E-mail</span>
+            <div class="box">
+                <div class="ícone">
+                    <ion-icon name="person"></ion-icon>
+                </div>
+                <input type="text" placeholder="E-mail">
+            </div>
+        </div>
+        <div class="inputBox">
+            <span>Confirme o e-mail</span>
+            <div class="box">
+                <div class="ícone">
+                    <ion-icon name="person"></ion-icon>
+                </div>
+                <input type="text" placeholder="Confirme o e-mail">
+            </div>
+        </div>
+
+        <div class="inputBox">
+            <span>Senha</span>
+            <div class="box">
+                <div class="ícone">
+                    <ion-icon name="lock-closed"></ion-icon>
+                </div>
+                <input type="password" id="id_password" placeholder="insira a sua senha">
+                <i class="far fa-eye" id="togglePassword"></i>
+            </div>
+        </div>
+        <label>
+            <input type="checkbox"> Aceito os <a href="#">termos de uso</a>
+        </label>
+        <div class="inputBox">
+            <div class="box">
+                <input type="submit" value="Login">
+            </div>
+            <br><br><span style="text-align: center; ">Ou Faça registro com suas redes sociais</span>
+                <div class="boxÍcones">
+                    <div class="loginIcons">
+                            <ion-icon name="logo-facebook"></ion-icon>
+                    </div>
+                    <div class="loginIcons">
+                        <ion-icon name="logo-twitter"></ion-icon>
+                    </div>
+                    <div class="loginIcons">
+                        <ion-icon name="logo-google"></ion-icon>
+                    </div>
+                </div>
+        </div>
+
+    </form>
+</div>
+
+<script src="js/main.js"></script>
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+<script>
+    const togglePassword = document.querySelector('#togglePassword');
+    const password = document.querySelector('#id_password');
+
+    togglePassword.addEventListener('click', function (e) {
+        // toggle the type attribute
+        const type = password.getAttribute('type') === 'password' ? 'text' : 'password';
+        password.setAttribute('type', type);
+        // toggle the eye slash icon
+        this.classList.toggle('fa-eye-slash');
+    });
+</script>
+
+</body>
+</html>
